@@ -1,0 +1,179 @@
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,500,700");
+@import './reset';
+@import './social-buttons';
+@import './constants';
+
+/*================= IMPORTS ================================*/
+
+html, body {
+    background: #c3cfe2;
+    height: 100%;
+    font-family: "Raleway", sans-serif;
+}
+.wrapper {
+    height: 100%;
+    width: 100%;
+} 
+header {
+    padding-top: 0.8em;
+    height: 4em;
+    text-align: center;
+    font-weight: 900;
+    color: #ffffff;
+    background: $headerBackground;
+}
+
+/*============= Main ===========*/
+.testimonial-container {
+    display: grid;
+    gap: 1rem;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+.testimonial {
+    position: relative;
+    height: 450px;
+    width: 350px;
+    display: grid;
+    grid-template-rows: 60% 40%;
+    transition: 350ms opacity ease-in-out;
+    cursor: pointer;
+}
+.testimonial:hover {
+    opacity: 0.1;
+}
+.testimonial:hover .button{
+    z-index: 9999;
+    display: block;
+}
+.button {
+    position: absolute;
+    top: 40%;
+    left: 33%;
+    display: none;
+    width: 120px;
+    height: 50px;
+    background: #686de0;
+    transition: visibility ease-in 350ms
+}
+.button:hover {
+    color: #4d0000;
+    border: 5px solid #ffffff;
+}
+.button::before {
+    content: 'More';
+    font-size: 1.5em;
+    font-weight: 900;
+    color: #ffffff;
+}
+.testimonial__beschrijving-box {
+    padding: 1em;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background: #ffffff;
+}
+.testimonial__beschrijving {
+    padding: 10px;
+    font-size: 1.6rem;
+    text-align: justify;
+    line-height: 1.9rem;
+    color: #4d0000;
+}
+.testimonial__img {
+    margin-top: -4rem;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+}
+.testimonial__footer {
+    text-align: center;
+    color: #ffffff;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: $footTestimoniBackground;
+}
+.testimonial__name {
+    padding-top: 20px;
+    color: #ffffff;
+}
+.testimonial__website {
+    padding-top: -10px;
+    color: #B0B3EA;
+}
+
+/*============= social buttons ==========*/
+.social {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 15px;
+    width: 100%;
+}
+/*=============== blog ============*/
+.social__box-blog {
+    background: #e17b77; 
+} 
+.social__blog-link {
+    @include socialsButtonsMobile();
+}
+.social__blog-link::before {
+    content: "\f5fc";
+    @include socialButtonsStyleMobile();
+}
+/*=============== facebook ============*/
+.social__box-facebook {
+    background-color: #3b5998;
+}
+.social__facebook-link {
+    @include socialsButtonsMobile();
+}
+.social__facebook-link::before {
+    content: "\f5fc";
+    @include socialButtonsStyleMobile();
+}
+/*=============== twitter ============*/
+.social__box-twiter {
+  background-color: #00aced;
+}
+.social__twitter-link {
+    @include socialsButtonsMobile();
+}
+.social__twitter-link::before {
+    content: "\f5fc";
+    @include socialButtonsStyleMobile();
+}
+/*=============== github ============*/
+.social__box-github {
+    background-color: #333;
+  }
+.social__github-link {
+    @include socialsButtonsMobile();
+}
+.social__github-link::before {
+    content: "\f5fc";
+    @include socialButtonsStyleMobile();
+}
+/*=============== linkedin ============*/
+.social__box-linkedin {
+    background-color: #007bb6;
+  }
+.social__linkedin-link {
+    @include socialsButtonsMobile();
+}
+.social__linkedin-link::before {
+    content: "\f5fc";
+    @include socialButtonsStyleMobile(); 
+}
+/*============= end Main ===========*/
+footer {
+    padding-top: 2em;
+    height: 5em;
+    text-align: center;
+    font-weight: 900;
+    color: #ffffff;
+    background: #686de0;
+}
+/*=============================================*/
+@import './media-query';

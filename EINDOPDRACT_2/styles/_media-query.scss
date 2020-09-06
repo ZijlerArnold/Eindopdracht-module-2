@@ -1,0 +1,83 @@
+@import './constants';
+
+
+ /*==================== Tablet ===========================*/
+@media only screen and (min-width: 620px) {
+    .testimonial-container {
+        padding: 1%;
+        width: 100;
+        grid-template-columns: repeat(2, 1fr);
+    }
+ }
+
+
+ /*==================== Desktop ===========================*/
+ @media only screen and (min-width: 1024px) {
+     .testimonial-container {
+        padding: 1%;
+        width: 70%;
+        margin-left: 2%;
+        grid-template-columns: repeat(3, 1fr);
+     }
+      
+     /*============= social buttons ==========*/
+     .social {
+        grid-template-columns: repeat(1, 1fr);
+        position: fixed;
+        top: 25%;
+        right: -10.5%;
+        width: 14em;
+        height: 30%;
+        padding-right: 3em;
+    }
+    .social {
+        direction: rtl;
+      }
+      .social > * {
+        direction: ltr;
+      }
+    item {
+        @include socialsButtonsDesktop();
+        transition: all, 0.5s;
+        width: 100%;
+      }
+      item:hover {
+        width: 228%;
+      }   
+    /*=============== blog ============*/
+    .social__blog-link {
+        @include socialsButtonsDesktop();
+    }
+    .social__blog-link:before {
+        @include  socialButtonsStyleDesktop();
+    }
+    /*=============== facebook ============*/
+        .social__facebook-link {
+    @include socialsButtonsDesktop();
+        }
+        .social__facebook-link::before {
+            @include  socialButtonsStyleDesktop();
+        }
+    /*=============== twitter ============*/
+    .social__twitter-link {
+        @include socialsButtonsDesktop();
+    }
+    .social__twitter-link::before {
+        @include  socialButtonsStyleDesktop();
+    }
+    /*=============== github ============*/
+    .social__github-link {
+        @include socialsButtonsDesktop();
+    }
+    .social__github-link::before {
+        @include  socialButtonsStyleDesktop();
+    }
+    /*=============== linkedin ============*/
+    .social__linkedin-link {
+        @include socialsButtonsDesktop();
+    }
+    .social__linkedin-link::before {
+        @include  socialButtonsStyleDesktop();
+    }
+  }
+  

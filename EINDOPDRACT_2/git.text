@@ -1,0 +1,127 @@
+
+https://www.youtube.com/watch?v=HVsySz-h9r4
+
+
+
+
+Installing Git:
+sudo yum install git
+
+cd mijn-werk
+ls -ls
+
+als je het project wilt verwijderen:
+rm -rf .git
+
+touch .gitignore
+
+
+git init // initialze local git repository
+
+git config --global user.name 'Arnold Zijler'
+git config --global user.email 'arnold.zijler@live.nl'
+git config --list
+
+--help kan je gebruiken voor meer info
+
+
+git add <file> // add files to index
+git add *html // voorbeeld alle html
+git add .    // pakt alles
+git status // check status of working tree
+git commit // commit changes in index
+
+VIM editor:
+- i = insert mode
+- uncommmen insert mode in file
+- escape to exit
+ insert mode
+- :wq
+
+
+to do without!!!:
+git commit -m 'changed app.js'
+git branch mijnwerk: voorbeeld om in te werken
+git commit -m 'another change' = copie gemaakt
+git checkout mijnwerk = uit another change terug naar mijnwerk
+als je klaar bent in de master = git merge login (hoe je het hebt genoemd)
+
+git remote
+
+
+git push // push to remote repsitory
+git clone // clone repository in a new directory
+git pull // als meerdere personen werken eraan
+
+=================================================================
+git init 
+ls -a
+git status
+touch index.html
+git status
+git add index.html
+git status
+git commit -m 'create index.html'
+git status
+git log
+git log --oneline
+git checkout 'de nummers'
+git checkout master
+maak nu files js en css
+git status
+git add index.html app.js
+git status
+maak veranderingen aan in index en css
+git status
+maak in 1 x een commit voor alle files
+git add .
+git status
+en nu
+git commit -m 'Ik heb aanpassingen gemaakt voor de styling'
+git log
+git status
+maak nu weer aanpassing in style css
+git status
+git add style.css
+git commit -m 'nog background aanpassing gemaakt'
+controleren
+om terrug te gaan naar vorige backup
+git checkout 0317ce490f27991a2cd3abf8daecaaf704190f6c
+
+===================
+git branch
+git checkout master
+=================
+
+making a new branch
+git branch grazycolors
+git checkout grazycolor
+maak nu aanpassingen in je eigen branch
+git status
+git add .
+git commit -m 'gewoon zomaar wat gedaan'
+als ik tevreden ben ga ik mergen
+switch naar master
+git merge grazwcolors
+
+
+
+uploaden naar github:
+=====================
+Maak een nieuw reposite aan in github
+git remote -v
+git remote git remote add origin https://github.com/masterofownmind/lesson2.git
+git remote -v
+git push -u origin master
+git status
+elke keer als je een verandering maakt:
+git push -u origin master
+
+Nodig iemand uit op reposetery
+nadat deze wat heeft gepushed!
+git pull origin master
+
+nieuwe branch maken:
+git checkout -b relaxing
+
+
